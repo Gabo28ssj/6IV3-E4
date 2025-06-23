@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ford</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --azul-ford: #112e7c;
+      --negro-fondo: #000000;
+      --gris-texto: #000000;
+      --blanco-ford: #ffffff;
+      --borde-fino: 2px solid var(--azul-ford);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--negro-fondo);
+      color: var(--gris-texto);
+      line-height: 1.6;
+    }|
+
+    header.site-header {
+      background-color: var(--azul-ford);
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(19, 2, 116, 0.795);
+    }
+
+    .site-header h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: var(--blanco-ford);
+      background-color: #001239;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .btn-menu {
+      position: absolute;
+      left: 20px;
+      top: 6%;
+      transform: translateY(-50%);
+      padding: 10px 16px;
+      background-color: #0000009f;
+      border: var(--borde-fino);
+      color: var(--blanco-ford);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn-menu:hover {
+      background-color: var(--blanco-ford);
+      color: var(--azul-ford);
+    }
+
+
+    .historia-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .historia-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--blanco-ford);
+    }
+
+    .historia-section p {
+      font-size: 1.2rem;
+      text-align: center;
+      color: var(--blanco-ford);
+    }
+
+    .galeria-escalonada {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 60px auto;
+      height: 600px;
+    }
+
+    .galeria-escalonada img {
+      position: absolute;
+      width: 280px;
+      height: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    .galeria-escalonada img:nth-child(1) {
+      left: 50px;
+      top: 0;
+    }
+
+    .galeria-escalonada img:nth-child(2) {
+      left: 370px;
+      top: 60px;
+      width: 200px;
+    }
+
+    .galeria-escalonada img:nth-child(3) {
+      right: 0;
+      left: 570px;
+      top: 185px;
+    }
+
+    .detalle-auto-ampliado {
+      width: 95vw;
+      max-width: 1300px;
+      margin: 50px auto;
+      background-color: #1a1a1a;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
+    }
+
+    .detalle-auto-ampliado h2 {
+      font-size: 2.5rem;
+      color: var(--blanco-ford);
+      margin-bottom: 30px;
+      text-align: center;
+      text-shadow: 2px 2px #000;
+    }
+
+    .detalle-auto-ampliado img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .detalle-auto-ampliado p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .categoria-btn {
+      display: inline-block;
+      background-color: #0000009f;
+      color: var(--blanco-ford);
+      border: var(--borde-fino);
+      padding: 10px 16px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      transition: 0.3s;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+
+    .categoria-btn:hover {
+      background-color: var(--blanco-ford);
+      color: var(--azul-ford);
+    }
+
+    .imagen-portada {
+  display: block;
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+.site-footer {
+  background-color: #7b7b7b;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 40px;
+  border-top: 5px solid #001239;
+}
+
+.site-footer .redes {
+  margin: 10px 0;
+}
+
+.site-footer .redes a {
+  margin: 0 10px;
+  color: rgb(38, 38, 38);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer .redes a:hover {
+  color: #001239;
+}
+    @media (max-width: 768px) {
+      .detalle-auto-ampliado {
+        padding: 20px;
+      }
+
+      .site-header h1 {
+        font-size: 2rem;
+      }
+
+      .btn-menu {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
+    }
+  </style>
+</head>
+</head>    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<body>
+  <header class="site-header">
+    <a href="galeria_carros.html" class="btn-menu">&larr; Regresar al Menú</a>
+    <h1>FORD</h1>
+  </header>
+
+<!--CIERRE ENCABEZADO -->
+<div style="background: white; padding: 30px 0;">
+  <img src="Imagenes/ford/portada.png" alt="Ford Mustang" class="imagen-portada"> 
+  <!--IMAGENFEGAGI-->
+</div>
+
+<section class="historia-section">
+    <h2>Historia de Ford</h2>  
+    <p>
+      Ford Motor Company fue fundada en 1903 por Henry Ford en Detroit, EE.UU.
+      <br><br>
+      Revolucionó la industria automotriz con la producción en cadena y el icónico Ford Modelo T, haciendo los autos accesibles para millones.
+      <br><br>
+      Ford ha sido pionera en innovación, seguridad y diseño, con modelos legendarios como el Mustang, el GT40 y la F-150.
+      <br><br>
+      La marca ha tenido una fuerte presencia en competencias como Le Mans y NASCAR, y sigue siendo símbolo de robustez y tecnología.
+      <br><br>
+      Hoy, Ford continúa su legado con vehículos eléctricos, deportivos y utilitarios, manteniéndose como una de las marcas más reconocidas del mundo.
+    </p>
+
+
+    <!--fotosescalera-->
+    <div class="galeria-escalonada">
+       <img src="Imagenes/ford/esalera1.jpg" alt="Ford 1">
+       <img src="Imagenes/ford/escaleras2.png" alt="Ford 2">
+        <img src="Imagenes/ford/escalera3.png" alt="Ford 3">
+    </div>
+<br>
+
+
+<div style="text-align: center; margin-top: 40px;">
+  <button id="btn-categorias" class="btn-menu" style="position: static; margin: 0 auto; display: inline-block;" onclick="toggleMenuCategorias()">Ver Categorías</button>
+</div>
+<br>
+<br>
+
+<!-- Menú principal de categorías -->
+<div id="menu-categorias" class="categorias-section" style="display: none; flex-direction: column; align-items: center; margin-top: 20px;">
+  <div class="categoria-row" style="gap: 10px; flex-wrap: wrap; justify-content: center;">
+    <button class="categoria-btn" style="background-color: var(--azul-ford); color: white;" onclick="mostrarListaAutos('superdeportivos')">Superdeportivos</button>
+    <button class="categoria-btn" style="background-color: var(--azul-ford); color: white;" onclick="mostrarListaAutos('hiperautos')">Hiperautos</button>
+    <button class="categoria-btn" style="background-color: var(--azul-ford); color: white;" onclick="mostrarListaAutos('gt')">Gran Turismo</button>
+  </div>
+</div>
+
+<!-- Lista de autos: Superdeportivos -->
+<div id="lista-superdeportivos" class="categoria-row" style="display:none; justify-content:center; gap:20px; flex-wrap:wrap; margin-top: 20px;">
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+    'Ford Mustang Shelby GT500',
+    '2020',
+    'Imagenes/ford/fordShelbygt5002.png',
+    'Motor V8 5.2L Supercharged con 760 HP. 0-100 km/h en 3.5 segundos.',
+    'El Shelby GT500 es el Mustang más potente de la historia. Diseño agresivo, tecnología avanzada y rendimiento de pista. Inspirado en la herencia de Carroll Shelby.',
+    'Imagenes/ford/gt500.jpg',
+    'Imagenes/ford/fordShelbygt5001.png'
+  )">
+    <img src="Imagenes/ford/shelbygt500.jpg" alt="Ford Mustang Shelby GT500" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Ford Mustang Shelby GT500</h3>
+      <p>Modelo: Shelby GT500</p>
+      <p>Año: 2020</p>
+    </div>
+  </div>
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+    'Ford Mustang GT',
+    '2018',
+    'Imagenes/ford/vertical500.png',
+    'Motor V8 5.0L con 460 HP. 0-100 km/h en 4.3 segundos.',
+    'El Mustang GT es un ícono americano. Diseño clásico, sonido inconfundible y gran desempeño. Ha participado en múltiples competencias y películas.',
+    'Imagenes/ford/gt5.jpg',
+    'Imagenes/ford/mustangGT2.png'
+  )">
+    <img src="Imagenes/ford/mustangGT3.png" alt="Ford Mustang GT" style="width: 145px;">
+    <div class="info-auto">
+      <h3>Ford Mustang GT</h3>
+      <p>Modelo: Mustang GT</p>
+      <p>Año: 2018</p>
+    </div>
+  </div>
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+    'Ford Focus RS',
+    '2017',
+    'Imagenes/ford/rs2017.png',
+    'Motor 2.3L EcoBoost turbo con 350 HP. Tracción integral. 0-100 km/h en 4.7 segundos.',
+    'El Focus RS es el hatchback deportivo de Ford. Famoso por su modo Drift y su manejo ágil. Muy popular en rallies y competencias de autos compactos.',
+    'Imagenes/ford/gt2017_2.png',
+    'Imagenes/ford/gt2017_3.jpg'
+  )">
+    <img src="Imagenes/ford/focusrs.png" alt="Ford Focus RS" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Ford Focus RS</h3>
+      <p>Modelo: Focus RS</p>
+      <p>Año: 2017</p>
+    </div>
+  </div>
+</div>
+
+<!-- Lista de autos: Hiperautos -->
+<div id="lista-hiperautos" class="categoria-row" style="display:none; justify-content:center; gap:20px; flex-wrap:wrap; margin-top: 20px;">
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+    'Ford GT',
+    '2017',
+    'Imagenes/ford/FordGt2017_2.jpg',
+    'Motor V6 EcoBoost biturbo de 3.5L con 647 HP. 0-100 km/h en 3.0 segundos.',
+    'El Ford GT es el superauto de la marca, inspirado en el legendario GT40. Ganador de Le Mans 2016 en la categoría GTE-Pro. Producción limitada y tecnología de competición.',
+    'Imagenes/ford/FordGt2017.jpg',
+    'Imagenes/ford/FordGt2017_3.jpg'
+  )">
+    <img src="Imagenes/ford/FordGt2017_portada.jpg" alt="Ford GT 2017" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Ford GT</h3>
+      <p>Modelo: GT</p>
+      <p>Año: 2017</p>
+    </div>
+  </div>
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+    'Ford GT40',
+    '1966',
+    'Imagenes/ford/g40_5.jpg',
+    'Motor V8 de 7.0L con 485 HP. 0-100 km/h en 4.2 segundos.',
+    'El Ford GT40 es una leyenda de las 24 Horas de Le Mans, ganando cuatro veces consecutivas (1966-1969). Símbolo de la rivalidad Ford vs Ferrari.',
+    'Imagenes/ford/gt40_4.jpg',
+    'Imagenes/ford/gt40_2.jpg'
+  )">
+    <img src="Imagenes/ford/gt40_1.jpg" alt="Ford GT40" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Ford GT40</h3>
+      <p>Modelo: GT40</p>
+      <p>Año: 1966</p>
+    </div>
+  </div>
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+    'Ford RS200',
+    '1986',
+    'Imagenes/ford/rs200_1.jpeg',
+    'Motor 1.8L turbo con 250 HP (versión de calle). 0-100 km/h en 5.0 segundos.',
+    'El RS200 fue creado para el Grupo B de rally. Chasis ligero, tracción integral y gran desempeño en competición. Solo se fabricaron 200 unidades.',
+    'Imagenes/ford/rs200_2.jpg',
+    'Imagenes/ford/rs200_3.png'
+  )">
+    <img src="Imagenes/ford/rs200.jpg" alt="Ford RS200" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Ford RS200</h3>
+      <p>Modelo: RS200</p>
+      <p>Año: 1986</p>
+    </div>
+  </div>
+</div>
+
+<!-- Lista de autos: GT -->
+<div id="lista-gt" class="categoria-row" style="display:none; justify-content:center; gap:20px; flex-wrap:wrap; margin-top: 20px;">
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+    'Ford Mustang Mach-E GT',
+    '2021',
+    'Imagenes/ford/matchE_1.jpg',
+    'SUV eléctrico de alto rendimiento con 487 HP. 0-100 km/h en 3.7 segundos.',
+    'El Mach-E GT es la versión deportiva del SUV eléctrico de Ford. Combina tecnología, autonomía y prestaciones. Interior moderno y conectividad avanzada.',
+    'Imagenes/ford/machE_2.jpg',
+    'Imagenes/ford/matchE_3.jpg'
+  )">
+    <img src="Imagenes/ford/matchE.jpg" alt="Ford Mustang Mach-E GT" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Ford Mustang Mach-E GT</h3>
+      <p>Modelo: Mach-E GT</p>
+      <p>Año: 2021</p>
+    </div>
+  </div>
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+    'Ford Mondeo ST220',
+    '2002',
+    'Imagenes/ford/mondeo_1.jpg',
+    'Motor V6 3.0L con 226 HP. 0-100 km/h en 6.8 segundos.',
+    'El Mondeo ST220 es la versión deportiva del sedán europeo. Excelente equilibrio entre confort y deportividad. Muy valorado por entusiastas.',
+    'Imagenes/ford/mondeo_2.jpg',
+    'Imagenes/ford/mondeo_3.jpg'
+  )">
+    <img src="Imagenes/ford/mondeo.jpg" alt="Ford Mondeo ST220" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Ford Mondeo ST220</h3>
+      <p>Modelo: Mondeo ST220</p>
+      <p>Año: 2002</p>
+    </div>
+  </div>
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+    'Ford Taurus SHO',
+    '2010',
+    'Imagenes/ford/taurus_1.jpg',
+    'Motor V6 EcoBoost 3.5L con 365 HP. 0-100 km/h en 5.2 segundos.',
+    'El Taurus SHO es la versión de alto desempeño del sedán grande de Ford. Tracción integral y tecnología avanzada. Muy popular en EE.UU.',
+    'Imagenes/ford/taurus_2.jpg',
+    'Imagenes/ford/Taurus_3.jpg'
+  )">
+    <img src="Imagenes/ford/taurus.jpg" alt="Ford Taurus SHO" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Ford Taurus SHO</h3>
+      <p>Modelo: Taurus SHO</p>
+      <p>Año: 2010</p>
+    </div>
+  </div>
+</div>
+
+<!-- Detalle del auto con imágenes alineadas -->
+<div id="detalle-auto" style="display: none; margin-top: 40px; background-color: #222; color: white; padding: 20px; border-radius: 12px; text-align: center; max-width: 900px; margin: auto;">
+  <h2 id="detalle-nombre"></h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin-top: 20px;">
+    <img id="detalle-imagen" src="" style="width: 35%; border-radius: 2px;" />
+    <img id="detalle-imagen2" src="" style="width: 60%; border-radius: 8px;" />
+  </div>
+
+  <img id="detalle-imagen3" src="" style="width: 100%; margin-top: 10px; border-radius: 8px;" />
+
+  <p id="detalle-año" style="margin-top: 20px;"></p>
+  <p id="detalle-info" style="margin-top: 10px;"></p>
+  <p id="detalle-info-extra" style="margin-top: 10px;"></p>
+  <br>
+  <button class="categoria-btn" style="background-color: var(--azul-ford); color: white;" onclick="cerrarDetalleAuto()">Regresar</button>
+</div>
+  <script>
+    function cerrarDetalleAuto() {
+      document.getElementById('detalle-auto').style.display = 'none';
+    }
+  </script>
+
+<style>
+  .categoria-btn {
+    background-color: #c00000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .categoria-btn:hover {
+    background-color: #a80000;
+  }
+
+  .carro-menu {
+    text-align: center;
+    border: 3px solid #050434;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #7e72c473;
+    transition: transform 0.3s;
+    width: 220px;
+    cursor: pointer;
+  }
+
+  .carro-menu:hover {
+    transform: scale(1.05);
+  }
+
+  .info-auto {
+    margin-top: 10px;
+  }
+</style>
+
+<script>
+  function toggleMenuCategorias() {
+    const menu = document.getElementById('menu-categorias');
+    const boton = document.getElementById('btn-categorias');
+
+    if (menu.style.display === 'none') {
+      menu.style.display = 'flex';
+      boton.textContent = 'Ocultar Categorías';
+      boton.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      menu.style.display = 'none';
+      boton.textContent = 'Ver Categorías';
+      ocultarListas();
+      cerrarDetalleAuto();
+    }
+  }
+
+  function mostrarListaAutos(categoria) {
+    ocultarListas();
+    cerrarDetalleAuto();
+    document.getElementById(`lista-${categoria}`).style.display = 'flex';
+  }
+
+  function ocultarListas() {
+    document.getElementById('lista-superdeportivos').style.display = 'none';
+    document.getElementById('lista-hiperautos').style.display = 'none';
+    document.getElementById('lista-gt').style.display = 'none';
+  }
+
+ 
+</script>
+
+<script>
+  function mostrarDetalleAuto(nombre, año, img1, info, infoExtra = '', img2 = '', img3 = '') {
+    document.getElementById('detalle-nombre').textContent = nombre;
+    document.getElementById('detalle-año').textContent = 'Año: ' + año;
+    document.getElementById('detalle-imagen').src = img1;
+    document.getElementById('detalle-imagen2').src = img2;
+    document.getElementById('detalle-imagen3').src = img3;
+    document.getElementById('detalle-info').textContent = info;
+    document.getElementById('detalle-info-extra').textContent = infoExtra;
+    document.getElementById('detalle-auto').style.display = 'block';
+    document.getElementById('detalle-auto').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function cerrarDetalleAuto() {
+    document.getElementById('detalle-auto').style.display = 'none';
+  }
+</script>
+
+
+</body>
+</html>

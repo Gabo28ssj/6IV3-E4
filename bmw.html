@@ -1,0 +1,542 @@
+ <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --rojo-ferrari: #010261;
+      --negro-fondo: #060606;
+      --gris-texto: #dcdcdc;
+      --amarillo-ferrari: #ffffff;
+      --borde-fino: 2px solid var(--amarillo-ferrari);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--negro-fondo);
+      color: var(--gris-texto);
+      line-height: 1.6;
+    }
+
+    header.site-header {
+      background-color: var(--rojo-ferrari);
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .site-header h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: var(--amarillo-ferrari);
+    }
+
+    .btn-menu {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 10px 16px;
+      background-color: var(--negro-fondo);
+      border: var(--borde-fino);
+      color: var(--amarillo-ferrari);
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn-menu:hover {
+      background-color: var(--amarillo-ferrari);
+      color: var(--rojo-ferrari);
+    }
+
+
+    .historia-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .historia-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--amarillo-ferrari);
+    }
+
+    .historia-section p {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .galeria-escalonada {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 60px auto;
+      height: 600px;
+    }
+
+    .galeria-escalonada img {
+      position: absolute;
+      width: 280px;
+      height: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    .galeria-escalonada img:nth-child(1) {
+      left: 0;
+      top: 0;
+    }
+
+    .galeria-escalonada img:nth-child(2) {
+      left: 310px;
+      top: 80px;
+    }
+
+    .galeria-escalonada img:nth-child(3) {
+      right: 0;
+      top: 160px;
+    }
+
+    .detalle-auto-ampliado {
+      width: 95vw;
+      max-width: 1300px;
+      margin: 50px auto;
+      background-color: #1a1a1a;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
+    }
+
+    .detalle-auto-ampliado h2 {
+      font-size: 2.5rem;
+      color: var(--amarillo-ferrari);
+      margin-bottom: 30px;
+      text-align: center;
+      text-shadow: 2px 2px #000;
+    }
+
+    .detalle-auto-ampliado img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .detalle-auto-ampliado p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .categoria-btn {
+      display: inline-block;
+      background-color: var(--rojo-ferrari);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+
+    .categoria-btn:hover {
+      background-color: #050857;
+    }
+
+.site-footer {
+  background-color: #7b7b7b;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 40px;
+  border-top: 5px solid #001239;
+}
+
+.site-footer .redes {
+  margin: 10px 0;
+}
+
+.site-footer .redes a {
+  margin: 0 10px;
+  color: rgb(38, 38, 38);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.imagen-portada {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+.site-footer .redes a:hover {
+  color: #001239;
+}
+    @media (max-width: 768px) {
+      .detalle-auto-ampliado {
+        padding: 20px;
+      }
+
+      .site-header h1 {
+        font-size: 2rem;
+      }
+
+      .btn-menu {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
+    }
+  </style>
+</head>    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<body>
+  <header class="site-header">
+    <a href="galeria_carros.html" class="btn-menu">&larr; Regresar al Menú</a>
+    <h1>BMW</h1>
+  </header>
+
+<!--CIERRE ENCABEZADO -->
+ <img src="Imagenes/bmw/bmwlo.png"  alt="BMW" class="imagen-portada">
+<!--IMAGENFEGAGI-->
+
+<section class="historia-section">
+    <h2>Historia de BMW</h2>
+<p>
+  BMW (Bayerische Motoren Werke) fue fundada en 1916 en Múnich, Alemania. Inicialmente dedicada a la producción de motores de avión, la empresa evolucionó para convertirse en uno de los fabricantes de automóviles y motocicletas más prestigiosos del mundo.
+  <br><br>
+  BMW se caracteriza por su enfoque en la ingeniería precisa, el placer de conducción y su famoso lema "El placer de conducir".
+  <br>
+   A lo largo del tiempo, ha innovado en tecnología automotriz, desde motores eficientes hasta sistemas de tracción y chasis avanzados.
+  <br>
+  La marca ha participado en diversas competiciones como la Fórmula 1, Le Mans y DTM, consolidando su reputación deportiva. BMW también es pionera en movilidad eléctrica con su línea i, que incluye modelos como el i3 e i8.
+</p>
+
+ <!--fotosescalera-->
+    <div class="galeria-escalonada">
+       <img src="Imagenes/bmw/bmwm2.png" alt="Ferrari 1">
+       <img src="Imagenes/bmw/bmwprinces.png" alt="Ferrari 2">
+        <img src="Imagenes/bmw/bmwfris.png" alt="Ferrari 3">
+    </div>
+<br>
+<br>
+<br>
+
+<div style="text-align: center; margin-top: 40px;">
+  <button id="btn-categorias" class="btn-regresar categoria-btn" onclick="toggleMenuCategorias()">Ver Categorías</button>
+</div>
+<br>
+<br>
+
+<!-- Menú principal de categorías -->
+<div id="menu-categorias" class="categorias-section" style="display: none; flex-direction: column; align-items: center; margin-top: 20px;">
+  <div class="categoria-row" style="gap: 10px; flex-wrap: wrap; justify-content: center;">
+    <button class="categoria-btn" onclick="mostrarListaAutos('superdeportivos')">Deportivos</button>
+    <button class="categoria-btn" onclick="mostrarListaAutos('hiperautos')">SUV y Crossovers</button>
+    <button class="categoria-btn" onclick="mostrarListaAutos('gt')">Eléctricos (i Series)</button>
+  </div>
+</div>
+
+
+
+<!-- Lista de autos: Deportivos -->
+ <!--bmw m2-->
+<div id="lista-superdeportivos" class="categoria-row" style="display:none; justify-content:center; gap:20px; flex-wrap:wrap; margin-top: 20px;">
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+  'BMW M2 Competition',
+  '2018',
+  'Imagenes/bmw/m2.png',
+  'Motor 3.0L biturbo de 6 cilindros en línea, 410 CV. 0-100 km/h en 4.2 segundos.',
+  'Diseñado para ofrecer el máximo placer de conducción en formato compacto. Inspirado en los M3 clásicos. Velocidad máxima: 280 km/h. Participa en múltiples eventos de track-day. Producción limitada.',
+  'Imagenes/bmw/m2blue.png',
+  'Imagenes/bmw/BMW-M2-Competition-Manhart.png')">
+    <img src="Imagenes/bmw/m2 blanco.png" alt="Ferrari 488 GTB" style="width: 200px;">
+    <div class="info-auto">
+      <h3>BMW M2 Competition</h3>
+      <p>Modelo: M2 Competition</p>
+      <p>Año: 2015</p>
+    </div>
+  </div>
+
+<!--BMW M4 G82-->
+   <div class="carro-menu" onclick="
+mostrarDetalleAuto(
+  'BMW M4 G82',
+  '2021',
+  'Imagenes/bmw/g82m.png',
+  'Motor 3.0L biturbo de 6 cilindros, 510 CV. Transmisión automática o manual.',
+  'Diseño agresivo con parrilla vertical distintiva. Aceleración 0-100 km/h en 3.9 segundos. Inspirado en el automovilismo de BMW Motorsport. Velocidad máxima: 290 km/h.',
+  'Imagenes/bmw/g82_cs_ext_m-design-engine-bonnet_fb.png',
+  'Imagenes/bmw/g84.png')">
+    <img src="Imagenes/bmw/g82_cs_ext_m-design-engine-bonnet_fb.png" alt="Ferrari F8 Tributo" style="width: 200px;">
+    <div class="info-auto">
+      <h3>BMW M4 G82</h3>
+      <p>Modelo: M4 G82</p>
+      <p>Año: 2021</p>
+    </div>
+  </div>
+
+<!--BMW M5 CS-->
+ <div class="carro-menu" onclick="
+mostrarDetalleAuto(
+  'BMW M5 CS',
+  '2021',
+  'Imagenes/bmw/m5cs.png',
+  'Motor V8 biturbo de 4.4L, 635 CV. 0-100 km/h en 3.0 s.',
+  'El BMW más potente de producción hasta la fecha. Edición limitada. Inspirado en la pista pero con confort para uso diario. Velocidad máxima: 305 km/h.',
+  'Imagenes/bmw/BMW-M5_CS-2022-Rear.0e952371.png',
+  'Imagenes/bmw/BMW-M5_CS-2022-Side_Profile.0e952371.png')">
+    <img src="Imagenes/bmw/G90-BMW-M5-CS-01.png" alt="Ferrari 812 Superfast" style="width: 200px;">
+    <div class="info-auto">
+      <h3>BMW M5 CS</h3>
+      <p>Modelo: M5 CS</p>
+      <p>Año: 2021</p>
+    </div>
+  </div>
+</div>
+
+<!--Categoría 2: SUV y Crossovers-->
+<!--BMW X3 M40i-->
+<div id="lista-hiperautos" class="categoria-row" style="display:none; justify-content:center; gap:20px; flex-wrap:wrap; margin-top: 20px;">
+    <div class="carro-menu" onclick="mostrarDetalleAuto(
+  'BMW X3 M40i',
+  '2022',
+  'Imagenes/bmw/m40i.png',
+  'Motor 3.0L turbo de 6 cilindros, 382 CV. Tracción xDrive.',
+  'SUV compacto deportivo con gran equilibrio entre potencia y comodidad. Ideal para ciudad y carretera. Aceleración 0-100 km/h en 4.5 s.',
+  'Imagenes/bmw/descarga.png',
+  'Imagenes/bmw/M400 i.png')">
+    <img src="Imagenes/bmw/M400 i 3.png" alt="Ferrari LaFerrari" style="width: 200px;">
+    <div class="info-auto">
+      <h3>BMW X3 M40i</h3>
+      <p>Modelo: X3 M40i</p>
+      <p>Año: 2022</p>
+    </div>
+  </div>
+
+  <!--BMW X5 M-->
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+  'BMW X5 M',
+  '2020',
+  'Imagenes/bmw/bmw-m-series-x5-m-sp-technical-desktop.png',
+  'Motor V8 biturbo de 600 CV. Sistema M xDrive. 0-100 km/h en 3.9 s.',
+  'SUV de lujo con desempeño de superauto. Equipado con tecnología de pista. Interior deportivo con acabados de alta gama.',
+  'Imagenes/bmw/bmw-x-series-x5-m60i-sp-desktop.png',
+  'Imagenes/bmw/bmw-m-series-x5-m-sd-bmw-individual-02.png')">
+    <img src="Imagenes/bmw/bmw-m-series-x5-m-sp-technical-desktop.png" alt="Ferrari SF90 Stradale" style="width: 200px;">
+    <div class="info-auto">
+      <h3>BMW X5 M</h3>
+      <p>Modelo: X5 M</p>
+      <p>Año: 2020</p>
+    </div>
+  </div>
+
+  <!--BMW XM (híbrido de alto rendimiento)-->
+  <div class="carro-menu" onclick="
+mostrarDetalleAuto(
+  'BMW XM',
+  '2023',
+  'Imagenes/bmw/bmxm.png',
+  'Motor híbrido V8 con potencia combinada de 653 CV.',
+  'Primer modelo M híbrido. Diseño futurista, interior premium, enfoque en lujo y rendimiento. Aceleración brutal para un SUV.',
+  'Imagenes/bmw/xm.png',
+  'Imagenes/bmw/bmw-xm-label-red-zaga.png')">
+    <img src="Imagenes/bmw/1366_2000.png" alt="Ferrari Enzo" style="width: 200px;">
+    <div class="info-auto">
+      <h3>BMW XM</h3>
+      <p>Modelo: XM</p>
+      <p>Año: 2023</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Lista de autos Eléctricos (i Series)-->
+ <!--Eléctricos (i Series)-->
+<div id="lista-gt" class="categoria-row" style="display:none; justify-content:center; gap:20px; flex-wrap:wrap; margin-top: 20px;">
+ <div class="carro-menu" onclick="mostrarDetalleAuto(
+  'BMW i3',
+  '2013',
+  'Imagenes/bmw/gbi3-01-stage-hd.png',
+  'Motor eléctrico de 170 CV. Autonomía de 190 km. Diseño urbano.',
+  'Compacto y ligero, ideal para ciudad. Construido en fibra de carbono. Uno de los primeros eléctricos de BMW. Interior con materiales reciclados.',
+  'Imagenes/bmw/i3.png',
+  'Imagenes/bmw/i3 1.png')">
+    <img src="Imagenes/bmw/electrici3.png" alt="Ferrari Portofino" style="width: 200px;">
+    <div class="info-auto">
+      <h3>BMW i3</h3>
+      <p>Modelo:i3</p>
+      <p>Año: 2013</p>
+    </div>
+  </div>
+
+  <!--BMW i4 M50-->
+  <div class="carro-menu" onclick="
+mostrarDetalleAuto(
+  'BMW i4 M50',
+  '2022',
+  'Imagenes/bmw/i4.png',
+  'Motor dual eléctrico, 544 CV. 0-100 km/h en 3.9 s.',
+  'Primera berlina eléctrica M Performance. Combina elegancia y potencia. Autonomía hasta 520 km. Inspiración en el M3.',
+  'Imagenes/bmw/I4m.png',
+  'Imagenes/bmw/I4m50.png')">
+    <img src="Imagenes/bmw/I4M.png" alt="Ferrari GTC4 Lusso" style="width: 200px;">
+    <div class="info-auto">
+      <h3>BMW i4 M50</h3>
+      <p>Modelo: i4 M50</p>
+      <p>Año: 2022</p>
+    </div>
+  </div>
+
+  <!--BMW iX-->
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+  'BMW iX',
+  '2022',
+  'Imagenes/bmw/ix.png',
+  'SUV eléctrico, hasta 523 CV. Autonomía de 600 km.',
+  'Diseño minimalista y lujoso. Tecnología futurista. Hecho con materiales sostenibles. Motor doble y tracción integral.',
+  'Imagenes/bmw/ix2.png',
+  'Imagenes/bmw/ix3.png')">
+    <img src="Imagenes/bmw/ix.png" alt="Ferrari Roma" style="width: 200px;">
+    <div class="info-auto">
+      <h3>BMW iX</h3>
+      <p>Modelo: iX</p>
+      <p>Año: 2022</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Detalle del auto con imágenes alineadas -->
+<div id="detalle-auto" style="display: none; margin-top: 40px; background-color: #222; color: white; padding: 20px; border-radius: 12px; text-align: center; max-width: 900px; margin: auto;">
+  <h2 id="detalle-nombre"></h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin-top: 20px;">
+    <img id="detalle-imagen" src="" style="width: 35%; border-radius: 2px;" />
+    <img id="detalle-imagen2" src="" style="width: 60%; border-radius: 8px;" />
+  </div>
+
+  <img id="detalle-imagen3" src="" style="width: 100%; margin-top: 10px; border-radius: 8px;" />
+
+  <p id="detalle-año" style="margin-top: 20px;"></p>
+  <p id="detalle-info" style="margin-top: 10px;"></p>
+  <p id="detalle-info-extra" style="margin-top: 10px;"></p>
+  <br>
+  <button class="categoria-btn" onclick="cerrarDetalleAuto()">Regresar</button>
+</div>
+  
+  <script>
+    function cerrarDetalleAuto() {
+      document.getElementById('detalle-auto').style.display = 'none';
+    }
+  </script>
+
+<style>
+  .categoria-btn {
+    background-color: #09095f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .categoria-btn:hover {
+    background-color: #020c49;
+  }
+
+  .carro-menu {
+    text-align: center;
+    border: 3px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #051042;
+    transition: transform 0.3s;
+    width: 220px;
+    cursor: pointer;
+  }
+
+  .carro-menu:hover {
+    transform: scale(1.05);
+  }
+
+  .info-auto {
+    margin-top: 10px;
+  }
+</style>
+
+<script>
+  function toggleMenuCategorias() {
+    const menu = document.getElementById('menu-categorias');
+    const boton = document.getElementById('btn-categorias');
+
+    if (menu.style.display === 'none') {
+      menu.style.display = 'flex';
+      boton.textContent = 'Ocultar Categorías';
+      boton.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      menu.style.display = 'none';
+      boton.textContent = 'Ver Categorías';
+      ocultarListas();
+      cerrarDetalleAuto();
+    }
+  }
+
+  function mostrarListaAutos(categoria) {
+    ocultarListas();
+    cerrarDetalleAuto();
+    document.getElementById(`lista-${categoria}`).style.display = 'flex';
+  }
+
+  function ocultarListas() {
+    document.getElementById('lista-superdeportivos').style.display = 'none';
+    document.getElementById('lista-hiperautos').style.display = 'none';
+    document.getElementById('lista-gt').style.display = 'none';
+  }
+</script>
+
+<script>
+  function mostrarDetalleAuto(nombre, año, img1, info, infoExtra = '', img2 = '', img3 = '') {
+    document.getElementById('detalle-nombre').textContent = nombre;
+    document.getElementById('detalle-año').textContent = 'Año: ' + año;
+    document.getElementById('detalle-imagen').src = img1;
+    document.getElementById('detalle-imagen2').src = img2;
+    document.getElementById('detalle-imagen3').src = img3;
+    document.getElementById('detalle-info').textContent = info;
+    document.getElementById('detalle-info-extra').textContent = infoExtra;
+    document.getElementById('detalle-auto').style.display = 'block';
+    document.getElementById('detalle-auto').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function cerrarDetalleAuto() {
+    document.getElementById('detalle-auto').style.display = 'none';
+  }
+</script>
+
+
+</body>
+</html>

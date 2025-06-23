@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NISSAN</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --rojo-ferrari: #343549;
+      --negro-fondo: #060606;
+      --gris-texto: #dcdcdc;
+      --amarillo-ferrari: #ffffff;
+      --borde-fino: 2px solid var(--amarillo-ferrari);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--negro-fondo);
+      color: var(--gris-texto);
+      line-height: 1.6;
+    }
+
+    header.site-header {
+      background-color: var(--rojo-ferrari);
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .site-header h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: var(--amarillo-ferrari);
+    }
+
+    .btn-menu {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 10px 16px;
+      background-color: var(--negro-fondo);
+      border: var(--borde-fino);
+      color: var(--amarillo-ferrari);
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn-menu:hover {
+      background-color: var(--amarillo-ferrari);
+      color: var(--rojo-ferrari);
+    }
+
+
+    .historia-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .historia-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--amarillo-ferrari);
+    }
+
+    .historia-section p {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .galeria-escalonada {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 60px auto;
+      height: 600px;
+    }
+
+    .galeria-escalonada img {
+      position: absolute;
+      width: 280px;
+      height: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    .galeria-escalonada img:nth-child(1) {
+      left: 0;
+      top: 0;
+    }
+
+    .galeria-escalonada img:nth-child(2) {
+      left: 310px;
+      top: 80px;
+    }
+
+    .galeria-escalonada img:nth-child(3) {
+      right: 0;
+      top: 160px;
+    }
+
+    .detalle-auto-ampliado {
+      width: 95vw;
+      max-width: 1300px;
+      margin: 50px auto;
+      background-color: #1a1a1a;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
+    }
+
+    .detalle-auto-ampliado h2 {
+      font-size: 2.5rem;
+      color: var(--amarillo-ferrari);
+      margin-bottom: 30px;
+      text-align: center;
+      text-shadow: 2px 2px #000;
+    }
+
+    .detalle-auto-ampliado img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .detalle-auto-ampliado p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .categoria-btn {
+      display: inline-block;
+      background-color: var(--rojo-ferrari);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+
+    .categoria-btn:hover {
+      background-color: #050857;
+    }
+
+.site-footer {
+  background-color: #7b7b7b;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 40px;
+  border-top: 5px solid #001239;
+}
+
+.site-footer .redes {
+  margin: 10px 0;
+}
+
+.site-footer .redes a {
+  margin: 0 10px;
+  color: rgb(38, 38, 38);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.imagen-portada {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+.site-footer .redes a:hover {
+  color: #001239;
+}
+    @media (max-width: 768px) {
+      .detalle-auto-ampliado {
+        padding: 20px;
+      }
+
+      .site-header h1 {
+        font-size: 2rem;
+      }
+
+      .btn-menu {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
+    }
+  </style>
+</head>    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<body>
+  <header class="site-header">
+    <a href="galeria_carros.html" class="btn-menu">&larr; Regresar al Menú</a>
+    <h1>NISSAN</h1>
+  </header>
+
+<!--CIERRE ENCABEZADO -->
+ <img src="Imagenes/nissan/nissanfondo.png"  alt="BMW" class="imagen-portada">
+<!--IMAGENFEGAGI-->
+
+<section class="historia-section">
+    <h2>Historia de NISSAN</h2>
+<p>  
+  Nissan Motor Co., Ltd. es una de las principales automotrices japonesas, fundada en 1933. Desde sus inicios,
+  <br>
+  Nissan ha sido sinónimo de innovación y tecnología accesible. La marca es reconocida por sus autos deportivos como el legendario GT-R,
+  <br>
+   por ser pionera en movilidad eléctrica con el Nissan LEAF. A lo largo de los años, Nissan ha mantenido una fuerte presencia en el automovilismo,
+  <br>
+  participando en competiciones de rally, resistencia y Super GT. Además, ha apostado fuertemente por el desarrollo sostenible con su gama de vehículos eléctricos.
+</p>
+
+
+ <!--fotosescalera-->
+    <div class="galeria-escalonada">
+       <img src="Imagenes/nissan/nismofre.png" alt="Ferrari 1">
+       <img src="Imagenes/nissan/escaleanismo.png" alt="Ferrari 2">
+        <img src="Imagenes/nissan/princi.png" alt="Ferrari 3">
+    </div>
+<br>
+<br>
+<br>
+
+<div style="text-align: center; margin-top: 40px;">
+  <button id="btn-categorias" class="btn-regresar categoria-btn" onclick="toggleMenuCategorias()">Ver Categorías</button>
+</div>
+<br>
+<br>
+
+<!-- Menú principal de categorías -->
+<div id="menu-categorias" class="categorias-section" style="display: none; flex-direction: column; align-items: center; margin-top: 20px;">
+  <div class="categoria-row" style="gap: 10px; flex-wrap: wrap; justify-content: center;">
+    <button class="categoria-btn" onclick="mostrarListaAutos('superdeportivos')">Deportivos</button>
+    <button class="categoria-btn" onclick="mostrarListaAutos('hiperautos')">Competición y Motorsport</button>
+    <button class="categoria-btn" onclick="mostrarListaAutos('gt')">Clásicos Legendarios</button>
+  </div>
+</div>
+
+
+
+<!-- Lista de autos: Deportivos -->
+<!--R35-->
+<div id="lista-superdeportivos" class="categoria-row" style="display:none; justify-content:center; gap:20px; flex-wrap:wrap; margin-top: 20px;">
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+  'Nissan GT-R R35',
+  '2007',
+  'Imagenes/nissan/r351.png',
+  'Motor V6 biturbo de 3.8 L con hasta 600 HP. 0 a 100 km/h en 2.7 s.',
+  'Diseñado como sucesor del Skyline GT-R. Es un ícono moderno. Desarrollado por Kazutoshi Mizuno. Ha ganado múltiples competencias de aceleración y resistencia. Kilometraje máx: 315 km/h.',
+  'Imagenes/nissan/Nissan_GT-R_T-spec_MY2024,_front,_2023.png',
+  'Imagenes/nissan/35.png')">
+    <img src="Imagenes/nissan/images.png" alt="Ferrari 488 GTB" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Nissan GT-R R35</h3>
+      <p>Modelo: GTR R 35</p>
+      <p>Año: 2007</p>
+    </div>
+  </div>
+
+<!--Nissan 370Z-->
+   <div class="carro-menu" onclick="
+mostrarDetalleAuto(
+  'Nissan 370Z',
+  '2009',
+  'Imagenes/nissan/370z.png',
+  'Motor V6 de 3.7 L, 332 HP, tracción trasera.',
+  'Parte de la icónica familia Z. Excelente relación peso-potencia. Inspirado en los modelos deportivos japoneses de los 70. Kilometraje máx: 250 km/h. Se produjeron más de 200,000 unidades.',
+  'Imagenes/nissan/370z2.png',
+  'Imagenes/nissan/350z3.png')">
+    <img src="Imagenes/nissan/fondo370z.png" alt="Ferrari F8 Tributo" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Nissan 370Z </h3>
+      <p>Modelo: 370Z</p>
+      <p>Año: 2009</p>
+    </div>
+  </div>
+
+<!--Nissan Silvia S15-->
+ <div class="carro-menu" onclick="
+mostrarDetalleAuto(
+  'Nissan Silvia S15',
+  '1999',
+  'Imagenes/nissan/silvia4.png',
+  'Motor SR20DET de 2.0 L turbo, 250 HP.',
+  'Muy popular en el drift y tuning. Símbolo de la cultura JDM. Diseño elegante con rendimiento equilibrado. Máximo: 230 km/h. Apareció en numerosas competiciones y videojuegos.',
+  'Imagenes/nissan/silvia3.png',
+  'Imagenes/nissan/silvia2.png')">
+    <img src="Imagenes/nissan/silviafond.png" alt="Ferrari 812 Superfast" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Nissan Silvia S15</h3>
+      <p>Modelo: Silvia S15</p>
+      <p>Año: 1999</p>
+    </div>
+  </div>
+</div>
+
+<!--Categoría 2: -->
+<!--Nissan GT-R Nismo GT3-->
+<div id="lista-hiperautos" class="categoria-row" style="display:none; justify-content:center; gap:20px; flex-wrap:wrap; margin-top: 20px;">
+    <div class="carro-menu" onclick="mostrarDetalleAuto(
+  'Nissan GT-R Nismo GT3',
+  '2012',
+  'Imagenes/nissan/nismo0.png',
+  'Versión de competición del GT-R. V6 3.8L twin turbo, 550+ HP.',
+  'Usado en competiciones FIA GT3, Super GT, y más. Diseño aerodinámico extremo. Velocidad máxima de 300 km/h. Ganador de múltiples títulos en resistencia.',
+  'Imagenes/nissan/nismo4.png',
+  'Imagenes/nissan/nismo2.png')">
+    <img src="Imagenes/nissan/nismo5.png" alt="Ferrari LaFerrari" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Nissan GT-R Nismo GT3</h3>
+      <p>Modelo:GT-R Nismo GT3</p>
+      <p>Año: 2012</p>
+    </div>
+  </div>
+
+<!--Nissan R390 GT1-->
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+  'Nissan R390 GT1',
+  '1997',
+  'Imagenes/nissan/r390.png',
+  'Motor V8 3.5L biturbo, 640 HP. Diseñado para Le Mans.',
+  'Construido por Nismo en colaboración con Tom Walkinshaw Racing. Solo se fabricaron 2 unidades homologadas para calle. Máximo: 354 km/h. Participó en las 24 Horas de Le Mans.',
+  'Imagenes/nissan/r3901.png',
+  'Imagenes/nissan/r3903.png')">
+    <img src="Imagenes/nissan/r3901.png" alt="Ferrari SF90 Stradale" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Nissan R390 GT1</h3>
+      <p>Modelo: R390 GT1</p>
+      <p>Año: 1997</p>
+    </div>
+  </div>
+
+  <!--Nissan DeltaWing-->
+  <div class="carro-menu" onclick="
+mostrarDetalleAuto(
+  'Nissan DeltaWing',
+  '2012',
+  'Imagenes/nissan/delta2.png',
+  'Diseño experimental con peso ultra bajo. Motor de 1.6L turbo, 300 HP.',
+  'Fue un prototipo revolucionario que participó en Le Mans. Rompía esquemas de aerodinámica y consumo. Aunque no ganó, dejó un legado técnico. Velocidad máx: 315 km/h.',
+  'Imagenes/nissan/delta3.png',
+  'Imagenes/nissan/delta1.png')">
+    <img src="Imagenes/nissan/delta2.png" alt="Ferrari Enzo" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Nissan DeltaWing</h3>
+      <p>Modelo: DeltaWing</p>
+      <p>Año: 2012</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Lista de autos Eléctricos (i Series)-->
+ <!--Nissan Skyline GT-R R34-->
+<div id="lista-gt" class="categoria-row" style="display:none; justify-content:center; gap:20px; flex-wrap:wrap; margin-top: 20px;">
+ <div class="carro-menu" onclick="mostrarDetalleAuto(
+  'Nissan Skyline GT-R R34',
+  '1999',
+  'Imagenes/nissan/r340.png',
+  'Motor RB26DETT 2.6L biturbo, 280 HP (realmente más).',
+  'Símbolo de la ingeniería japonesa. Famoso por su aparición en películas y videojuegos. Tecnología ATTESA AWD y Super-HICAS. Velocidad máx: 250+ km/h. Diseñado por Kozo Watanabe.',
+  'Imagenes/nissan/r341.png',
+  'Imagenes/nissan/r342.png')">
+    <img src="Imagenes/nissan/r343.png" alt="Ferrari Portofino" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Nissan Skyline GT-R R34</h3>
+      <p>Modelo:Skyline GT-R R34</p>
+      <p>Año: 1999</p>
+    </div>
+  </div>
+
+  <!--Nissan 300ZX Z32-->
+  <div class="carro-menu" onclick="
+mostrarDetalleAuto(
+  'Nissan 300ZX Z32',
+  '1989',
+  'Imagenes/nissan/zx1.png',
+  'Motor V6 3.0L biturbo, 300 HP.',
+  'Ganador del Motor Trend Import Car of the Year 1990. Diseño adelantado a su época. Muy exitoso en IMSA y Super GT. Vel. máx: 250 km/h. Uno de los Z más aclamados.',
+  'Imagenes/nissan/zx2.png',
+  'Imagenes/nissan/zx0.png')">
+    <img src="Imagenes/nissan/zx01.png" alt="Ferrari GTC4 Lusso" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Nissan 300ZX Z32</h3>
+      <p>Modelo: 300ZX Z32</p>
+      <p>Año: 1989</p>
+    </div>
+  </div>
+
+  <!--Nissan Datsun 240Z-->
+  <div class="carro-menu" onclick="mostrarDetalleAuto(
+  'Nissan Datsun 240Z',
+  '1969',
+  'Imagenes/nissan/datsun3.png',
+  'Motor L6 2.4L, 151 HP.',
+  'Modelo que inició la leyenda de los Z. Diseño deportivo accesible. Muy popular en EE. UU. Participó en rallies y carreras de turismos. Vel. máx: 200 km/h. Diseñado por Yoshihiko Matsuo.',
+  'Imagenes/nissan/datsun.png',
+  'Imagenes/nissan/datsun1.png')">
+    <img src="Imagenes/nissan/datsun2.png" alt="Ferrari Roma" style="width: 200px;">
+    <div class="info-auto">
+      <h3>Nissan Datsun 240Z</h3>
+      <p>Modelo: Datsun 240Z</p>
+      <p>Año: 1969</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Detalle del auto con imágenes alineadas -->
+<div id="detalle-auto" style="display: none; margin-top: 40px; background-color: #222; color: white; padding: 20px; border-radius: 12px; text-align: center; max-width: 900px; margin: auto;">
+  <h2 id="detalle-nombre"></h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin-top: 20px;">
+    <img id="detalle-imagen" src="" style="width: 35%; border-radius: 2px;" />
+    <img id="detalle-imagen2" src="" style="width: 60%; border-radius: 8px;" />
+  </div>
+
+  <img id="detalle-imagen3" src="" style="width: 100%; margin-top: 10px; border-radius: 8px;" />
+
+  <p id="detalle-año" style="margin-top: 20px;"></p>
+  <p id="detalle-info" style="margin-top: 10px;"></p>
+  <p id="detalle-info-extra" style="margin-top: 10px;"></p>
+  <br>
+  <button class="categoria-btn" onclick="cerrarDetalleAuto()">Regresar</button>
+</div>
+  
+  <script>
+    function cerrarDetalleAuto() {
+      document.getElementById('detalle-auto').style.display = 'none';
+    }
+  </script>
+
+<style>
+  .categoria-btn {
+    background-color: #5b5b66;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .categoria-btn:hover {
+    background-color: #5061ca;
+  }
+
+  .carro-menu {
+    text-align: center;
+    border: 3px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #121520;
+    transition: transform 0.3s;
+    width: 220px;
+    cursor: pointer;
+  }
+
+  .carro-menu:hover {
+    transform: scale(1.05);
+  }
+
+  .info-auto {
+    margin-top: 10px;
+  }
+</style>
+
+<script>
+  function toggleMenuCategorias() {
+    const menu = document.getElementById('menu-categorias');
+    const boton = document.getElementById('btn-categorias');
+
+    if (menu.style.display === 'none') {
+      menu.style.display = 'flex';
+      boton.textContent = 'Ocultar Categorías';
+      boton.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      menu.style.display = 'none';
+      boton.textContent = 'Ver Categorías';
+      ocultarListas();
+      cerrarDetalleAuto();
+    }
+  }
+
+  function mostrarListaAutos(categoria) {
+    ocultarListas();
+    cerrarDetalleAuto();
+    document.getElementById(`lista-${categoria}`).style.display = 'flex';
+  }
+
+  function ocultarListas() {
+    document.getElementById('lista-superdeportivos').style.display = 'none';
+    document.getElementById('lista-hiperautos').style.display = 'none';
+    document.getElementById('lista-gt').style.display = 'none';
+  }
+</script>
+
+<script>
+  function mostrarDetalleAuto(nombre, año, img1, info, infoExtra = '', img2 = '', img3 = '') {
+    document.getElementById('detalle-nombre').textContent = nombre;
+    document.getElementById('detalle-año').textContent = 'Año: ' + año;
+    document.getElementById('detalle-imagen').src = img1;
+    document.getElementById('detalle-imagen2').src = img2;
+    document.getElementById('detalle-imagen3').src = img3;
+    document.getElementById('detalle-info').textContent = info;
+    document.getElementById('detalle-info-extra').textContent = infoExtra;
+    document.getElementById('detalle-auto').style.display = 'block';
+    document.getElementById('detalle-auto').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function cerrarDetalleAuto() {
+    document.getElementById('detalle-auto').style.display = 'none';
+  }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Volkswagen - Galería de Autos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      background: #000000;
+      color: #1a1a1a;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .site-header, .site-footer {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .site-header {
+      background: #c2b9b9;
+      border-bottom: 4px solid #001239;
+      color: #000;
+    }
+
+    .site-footer {
+      background: #7b7b7b;
+      border-top: 5px solid #001239;
+      color: #000;
+      margin-top: 40px;
+    }
+
+    .site-footer .redes a {
+      margin: 0 10px;
+      color: #222;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      background: #030303;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 18, 57, 0.3);
+    }
+
+    h1, h2, h3 {
+      color: #f6f6f6;
+    }
+    p{
+      color: #f6f6f6;
+      font-size: 20px; 
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .intro {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .video-container {
+      width: 100%;
+      margin-bottom: 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 18, 57, 0.3);
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+    }
+
+    
+    .auto-viewer {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+      background: #000000;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 18, 57, 0.15);
+    }
+
+    .auto-viewer .left,
+    .auto-viewer .right {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .main-image img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .thumbnails img {
+      width: 80px;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .thumbnails img:hover {
+      transform: scale(1.1);
+    }
+
+    .info-carro {
+      background-color: #000000;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 18, 57, 0.1);
+      color: #222;
+    }
+
+    @media (max-width: 768px) {
+      .auto-viewer {
+        flex-direction: column;
+      }
+
+      .thumbnails {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Volkswagen - Galería de Autos</h1>
+  </header>
+
+  <main class="container">
+  
+    <section class="intro">
+      <h2>Introducción a Volkswagen</h2>
+      <p>
+        Volkswagen es una de las marcas automotrices más emblemáticas y exitosas del mundo. Fundada en 1937 en Alemania, ha sido reconocida por fabricar vehículos accesibles, confiables y con gran innovación tecnológica. Modelos icónicos como el "Vocho" (Beetle) y el Golf han marcado historia en la industria automotriz, combinando diseño, funcionalidad y rendimiento.
+      </p>
+    </section>
+
+ 
+    <section class="video-container">
+      <video controls autoplay muted>
+        <source src="videos/volkswagenVid/videoplayback (2).mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+    </section>
+
+
+    <section>
+      <h2>Modelos destacados</h2>
+
+    
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-golf" src="Imagenes/Volskwagen_IM/golf5.jpg" alt="Golf" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Volskwagen_IM/golf1.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/golf2.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/golf3.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/golf4.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/golf5.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            
+
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3>Volkswagen Golf</h3>
+          <p>
+            El Volkswagen Golf es un hatchback compacto reconocido por su diseño moderno, conducción ágil y excelente calidad de fabricación. Cuenta con motores TSI eficientes y turboalimentados, además de versiones deportivas como el Golf GTI que ofrecen un rendimiento superior. Incorpora tecnologías avanzadas como control crucero adaptativo y asistente de carril, proporcionando seguridad y confort al conductor. Su interior está bien aprovechado, combinando espacio y funcionalidad ideal para la conducción en ciudad y carretera.
+          </p>
+        </div>
+      </div>
+
+      
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-vocho" src="Imagenes/Volskwagen_IM/vocho1.jpg" alt="Vocho" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Volskwagen_IM/vocho2.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/vocho3.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/vocho4.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/vocho5.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/vocho1.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3>Volkswagen Vocho</h3>
+          <p>
+            El “Vocho” es un ícono automotriz global. Su producción comenzó en 1938 y se mantuvo por décadas gracias a su confiabilidad y diseño único. Las versiones clásicas cuentan con motor trasero enfriado por aire, lo que lo hace muy diferente a otros autos. Su diseño redondeado y compacto es muy reconocible, y destaca por su bajo costo de mantenimiento. Además, tiene un fuerte vínculo cultural en México, siendo un símbolo de la historia automotriz del país.
+          </p>
+        </div>
+      </div>
+
+      
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-jetta" src="Imagenes/Volskwagen_IM/jetta1.jpg" alt="Jetta" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Volskwagen_IM/jetta2.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/jetta3.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/jetta4.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/jetta5.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/jetta1.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3>Volkswagen Jetta</h3>
+          <p>
+            El Volkswagen Jetta es un sedán compacto que combina elegancia, rendimiento y tecnología. Desde su lanzamiento, ha sido uno de los modelos más populares de la marca por su diseño sobrio, amplio espacio interior y calidad en la conducción. Está disponible en versiones con motores turbo, ofreciendo una excelente relación entre potencia y eficiencia. Incluye sistemas avanzados de seguridad y conectividad, lo que lo convierte en una opción ideal tanto para uso familiar como profesional.          </p>
+        </div>
+      </div>
+
+
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-passat" src="Imagenes/Volskwagen_IM/Arteon1.jpg" alt="Passat" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Volskwagen_IM/Arteon2.jpg" onclick="cambiarImagen('main-passat', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/Arteon3.jpg" onclick="cambiarImagen('main-passat', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/Arteon4.jpg" onclick="cambiarImagen('main-passat', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/Arteon5.jpg" onclick="cambiarImagen('main-passat', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/Arteon1.jpg" onclick="cambiarImagen('main-passat', this.src)" />
+
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3>Volkswagen Arteon</h3>
+          <p>
+            El Volkswagen Arteon es un sedán premium de estilo coupé que destaca por su diseño elegante, aerodinámico y moderno. Lanzado como una alternativa más sofisticada al Passat, el Arteon combina una silueta deportiva con tecnologías de última generación. Ofrece motorizaciones potentes, interiores lujosos y detalles de confort pensados para el conductor exigente. Su distintiva parrilla frontal, faros LED integrados y techo descendente tipo fastback lo posicionan como uno de los modelos más estilizados de la marca. Es ideal para quienes buscan un vehículo con carácter, rendimiento y distinción.        </div>
+      </div>
+
+    
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-tiguan" src="Imagenes/Volskwagen_IM/tiguan1.jpg" alt="Tiguan" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Volskwagen_IM/tiguan2.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/tiguan3.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/tiguan4.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/tiguan5.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Volskwagen_IM/tiguan1.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3>Volkswagen Tiguan</h3>
+          <p>
+            El Volkswagen Tiguan es un SUV compacto que combina versatilidad, tecnología y seguridad en un diseño moderno y elegante. Es uno de los modelos más vendidos de la marca a nivel mundial gracias a su capacidad de adaptarse tanto a la ciudad como a viajes largos en carretera. Ofrece amplio espacio interior, maletero generoso, conectividad avanzada y sistemas de asistencia al conductor. Disponible en versiones con tracción delantera o integral, el Tiguan es ideal para familias que buscan comodidad, estilo y confiabilidad en un solo vehículo.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>REDES SOCIALES</p>
+    <div class="redes">
+      <a href="https://www.facebook.com/VolkswagenMX/?locale=es_LA" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="https://x.com/vw" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.instagram.com/volkswagen/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://www.youtube.com/@VolkswagenMexico" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+    </div>
+    <p>2025 Galería de Autos. 6IV3</p>
+  </footer>
+
+  
+  <script>
+    function cambiarImagen(idPrincipal, nuevaSrc) {
+      document.getElementById(idPrincipal).src = nuevaSrc;
+    }
+  </script>
+</body>
+</html>

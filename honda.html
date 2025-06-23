@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Honda - Galería de Autos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      background: #000000;
+      color: #1a1a1a;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .site-header, .site-footer {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .site-header {
+      background: #c2b9b9;
+      border-bottom: 4px solid #001239;
+      color: #000;
+    }
+
+    .site-footer {
+      background: #7b7b7b;
+      border-top: 5px solid #001239;
+      color: #000;
+      margin-top: 40px;
+    }
+
+    .site-footer .redes a {
+      margin: 0 10px;
+      color: #222;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      background: #030303;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 18, 57, 0.3);
+    }
+
+    h1, h2, h3 {
+      color: #f6f6f6;
+    }
+    p{
+      color: #f6f6f6;
+      font-size: 20px; 
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .intro {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .video-container {
+      width: 100%;
+      margin-bottom: 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 18, 57, 0.3);
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+    }
+
+    .auto-viewer {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+      background: #000000;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 18, 57, 0.15);
+    }
+
+    .auto-viewer .left,
+    .auto-viewer .right {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .main-image img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .thumbnails img {
+      width: 80px;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .thumbnails img:hover {
+      transform: scale(1.1);
+    }
+
+    .info-carro {
+      background-color: #000000;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 18, 57, 0.1);
+      color: #222;
+    }
+
+    @media (max-width: 768px) {
+      .auto-viewer {
+        flex-direction: column;
+      }
+
+      .thumbnails {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Honda - Galería de Autos</h1>
+  </header>
+
+  <main class="container">
+    <!-- Introducción -->
+    <section class="intro">
+      <h2>Introducción a  Honda</h2>
+      <p>
+        Honda es una de las marcas automotrices más reconocidas a nivel mundial por su compromiso con la calidad, innovación y eficiencia. Fundada en Japón en 1948, la compañía se ha destacado no solo en la industria del automóvil, sino también en motocicletas, robótica y motores. Modelos como el Civic, Accord y CR-V han consolidado su reputación de fiabilidad, mientras que su superdeportivo NSX demuestra el potencial de Honda en el alto rendimiento. Su enfoque en la sostenibilidad y la tecnología híbrida y eléctrica reafirma su visión de futuro.      </p>      
+    </section>
+
+    <!-- Video -->
+    <section class="video-container">
+      <video controls autoplay muted>
+        <source src="videos/HondaVID/videoplayback (3).mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+    </section>
+
+    
+    <section>
+      <h2>Modelos destacados</h2>
+
+      
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-golf" src="Imagenes/Honda_IM/Civic1.jpg" alt="Golf" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Honda_IM/Civic2.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Honda_IM/Civic3.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Honda_IM/Civic4.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Honda_IM/Civic5.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Honda_IM/Civic1.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            
+
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3>Honda Civic</h3>
+          <p>
+            El Honda Civic es uno de los sedanes compactos más populares del mundo. Con una reputación de fiabilidad, eficiencia en combustible y diseño moderno, ha sido una opción preferida por jóvenes y adultos. Su versión deportiva, el Civic Type R, destaca por su rendimiento y estética agresiva.
+          </p>
+        </div>
+      </div>
+
+     
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-vocho" src="Imagenes/Honda_IM/Accord1.jpg" alt="Vocho" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Honda_IM/Accord2.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Honda_IM/Accord3.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Honda_IM/Accord4.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Honda_IM/Accord5.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Honda_IM/Accord1.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+           
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3>Honda Accord</h3>
+          <p>
+            El Accord es un sedán mediano que combina lujo accesible, confort y tecnología. Ha sido galardonado en múltiples ocasiones por su seguridad y valor de reventa. Su interior espacioso y manejo suave lo hacen ideal tanto para la ciudad como para viajes largos.
+          </p>
+      </div>
+
+    
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-jetta" src="Imagenes/Honda_IM/CR1.jpg" alt="Jetta" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Honda_IM/CR2.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Honda_IM/CR3.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Honda_IM/CR4.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Honda_IM/CR5.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Honda_IM/CR1.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3> Honda CR-V</h3>
+          <p>
+            La Honda CR-V es una SUV compacta reconocida por su amplio espacio, eficiencia de combustible y confiabilidad. Con sistemas de asistencia avanzada al conductor y una estética moderna, es una de las SUV más vendidas en el mundo.
+          </p>
+          </div>
+
+     
+     
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-tiguan" src="Imagenes/Honda_IM/NSX1.jpg" alt="Tiguan" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Honda_IM/NSX2.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Honda_IM/NSX3.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Honda_IM/NSX4.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Honda_IM/NSX5.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Honda_IM/NSX1.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+           
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3> Honda NSX</h3>
+          <p>
+            El NSX es el superdeportivo híbrido de Honda, desarrollado con tecnología de Fórmula 1. Su sistema de tracción integral, motor V6 biturbo y tres motores eléctricos lo convierten en un modelo de alto desempeño, con una fusión perfecta entre potencia e innovación japonesa.        
+          </p>
+        </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>REDES SOCIALES</p>
+    <div class="redes">
+      <a href="https://www.facebook.com/Honda/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="https://x.com/Honda" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.instagram.com/honda/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://www.youtube.com/@Honda" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+    </div>
+    <p>2025 Galería de Autos. 6IV3</p>
+  </footer>
+
+
+  <script>
+    function cambiarImagen(idPrincipal, nuevaSrc) {
+      document.getElementById(idPrincipal).src = nuevaSrc;
+    }
+  </script>
+</body>
+</html>

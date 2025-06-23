@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lamborghini- Galería de Autos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      background: #000000;
+      color: #1a1a1a;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .site-header, .site-footer {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .site-header {
+      background: #c2b9b9;
+      border-bottom: 4px solid #001239;
+      color: #000;
+    }
+
+    .site-footer {
+      background: #7b7b7b;
+      border-top: 5px solid #001239;
+      color: #000;
+      margin-top: 40px;
+    }
+
+    .site-footer .redes a {
+      margin: 0 10px;
+      color: #222;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      background: #030303;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 18, 57, 0.3);
+    }
+
+    h1, h2, h3 {
+      color: #f6f6f6;
+    }
+    p{
+      color: #f6f6f6;
+      font-size: 20px; 
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .intro {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .video-container {
+      width: 100%;
+      margin-bottom: 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 18, 57, 0.3);
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+    }
+
+    
+    .auto-viewer {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+      background: #000000;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 18, 57, 0.15);
+    }
+
+    .auto-viewer .left,
+    .auto-viewer .right {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .main-image img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .thumbnails img {
+      width: 80px;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .thumbnails img:hover {
+      transform: scale(1.1);
+    }
+
+    .info-carro {
+      background-color: #000000;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 18, 57, 0.1);
+      color: #222;
+    }
+
+    @media (max-width: 768px) {
+      .auto-viewer {
+        flex-direction: column;
+      }
+
+      .thumbnails {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Lamborghini - Galería de Autos</h1>
+  </header>
+
+  <main class="container">
+   
+    <section class="intro">
+      <h2>Introducción a Lamborghini</h2>
+      <p>
+        Lamborghini es una marca italiana de autos deportivos de lujo reconocida mundialmente por su diseño agresivo, innovación tecnológica y motores de alto rendimiento. Fundada en 1963 por Ferruccio Lamborghini, la compañía ha revolucionado el concepto de superdeportivo, creando modelos que combinan potencia extrema con una estética impactante. Con vehículos como el Aventador, Huracán y su SUV Urus, Lamborghini continúa marcando tendencia en la industria automotriz, fusionando el arte del diseño con la ingeniería de precisión.
+      </p>
+    </section>
+
+    <!-- Video -->
+    <section class="video-container">
+      <video controls autoplay muted>
+        <source src="videos/Lambo/Lamborghini Revuelto From Now On.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+    </section>
+
+    <!-- Modelos -->
+    <section>
+      <h2>Modelos destacados</h2>
+
+      
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-golf" src="Imagenes/Lamborghini_IM/Aventador1.jpg" alt="Golf" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Lamborghini_IM/Aventador2.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Aventador3.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Aventador4.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Aventador5.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Aventador1.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            
+
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3>Lamborghini Aventador</h3>
+          <p>
+            El Lamborghini Aventador es un superdeportivo con motor V12 que representa el máximo rendimiento de la marca italiana. Con un diseño agresivo y aerodinámico, alcanza velocidades superiores a los 350 km/h. Su chasis de fibra de carbono y tecnología de competición lo convierten en una máquina exclusiva, potente y emocionante.
+          </p>
+        </div>
+      </div>
+
+    
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-vocho" src="Imagenes/Lamborghini_IM/Huracan1.jpg" alt="Vocho" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Lamborghini_IM/Huracan2.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Huracan3.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Huracan4.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Huracan5.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Huracan1.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+           
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3>Lamborghini Huracán</h3>
+          <p>
+            El Huracán es un deportivo con motor V10 que equilibra potencia y control. Ideal tanto para pista como para carretera, su diseño aerodinámico y tracción total lo hacen uno de los modelos más populares de Lamborghini. Ofrece versiones como el EVO, STO y Spyder, cada una con carácter único.          </p>
+        </div>
+      </div>
+
+    
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-jetta" src="Imagenes/Lamborghini_IM/Urus1.jpg" alt="Jetta" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Lamborghini_IM/Urus2.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Urus3.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Urus4.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Urus5.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Urus1.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3>Lamborghini Urus</h3>
+          <p>
+            El Lamborghini Urus es el primer SUV de la marca. Combina el lujo y la potencia de un superdeportivo con la funcionalidad y espacio de un SUV. Con motor V8 biturbo, tracción en las cuatro ruedas y modos de conducción para distintos terrenos, el Urus redefine el segmento de los SUV de alto rendimiento.        </div>
+      </div>
+
+     
+     
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-tiguan" src="Imagenes/Lamborghini_IM/Sian1.jpg" alt="Tiguan" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Lamborghini_IM/Sian2.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Sian3.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Sian4.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Sian5.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Lamborghini_IM/Sian1.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+           
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3>Lamborghini Sián</h3>
+          <p>
+            El Lamborghini Sián fue el primer modelo híbrido de producción de la marca. Inspirado en el Aventador, incorpora un motor V12 con tecnología híbrida de supercondensadores, logrando una respuesta instantánea y una aceleración increíble. Solo se produjeron 63 unidades coupé y 19 roadster, lo que lo hace muy exclusivo.          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>REDES SOCIALES</p>
+    <div class="redes">
+      <a href="https://www.facebook.com/Lamborghini/?locale=es_LA" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="https://x.com/lamborghini" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.instagram.com/lamborghini/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://www.youtube.com/@Lamborghini" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+    </div>
+    <p>2025 Galería de Autos. 6IV3</p>
+  </footer>
+
+  
+  <script>
+    function cambiarImagen(idPrincipal, nuevaSrc) {
+      document.getElementById(idPrincipal).src = nuevaSrc;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Porsche- Galería de Autos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      background: #000000;
+      color: #1a1a1a;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .site-header, .site-footer {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .site-header {
+      background: #c2b9b9;
+      border-bottom: 4px solid #001239;
+      color: #000;
+    }
+
+    .site-footer {
+      background: #7b7b7b;
+      border-top: 5px solid #001239;
+      color: #000;
+      margin-top: 40px;
+    }
+
+    .site-footer .redes a {
+      margin: 0 10px;
+      color: #222;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      background: #030303;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 18, 57, 0.3);
+    }
+
+    h1, h2, h3 {
+      color: #f6f6f6;
+    }
+    p{
+      color: #f6f6f6;
+      font-size: 20px; 
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .intro {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .video-container {
+      width: 100%;
+      margin-bottom: 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 18, 57, 0.3);
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+    }
+
+    .auto-viewer {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+      background: #000000;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 18, 57, 0.15);
+    }
+
+    .auto-viewer .left,
+    .auto-viewer .right {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .main-image img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .thumbnails img {
+      width: 80px;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .thumbnails img:hover {
+      transform: scale(1.1);
+    }
+
+    .info-carro {
+      background-color: #000000;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 18, 57, 0.1);
+      color: #222;
+    }
+
+    @media (max-width: 768px) {
+      .auto-viewer {
+        flex-direction: column;
+      }
+
+      .thumbnails {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Porsche - Galería de Autos</h1>
+  </header>
+
+  <main class="container">
+    <!-- Introducción -->
+    <section class="intro">
+      <h2>Introducción a  Porsche</h2>
+      <p>
+        Porsche es una de las marcas automotrices más prestigiosas del mundo, sinónimo de lujo, precisión alemana y desempeño deportivo. Fundada en 1931 por Ferdinand Porsche en Stuttgart, Alemania, la marca ha sido referente de innovación en ingeniería y diseño. Su modelo más icónico, el Porsche 911, ha trascendido generaciones siendo reconocido por su potencia, equilibrio y elegancia. Además, Porsche ha liderado la transición hacia la movilidad eléctrica con modelos como el Taycan, sin abandonar su herencia deportiva. Con una fuerte presencia en competencias automovilísticas, Porsche representa el espíritu de excelencia automotriz.    
+</p>
+    </section>
+    <!-- Video -->
+    <section class="video-container">
+      <video controls autoplay muted>
+        <source src="videos/porscheVID/porsche.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+    </section>
+
+    <!-- Modelos -->
+    <section>
+      <h2>Modelos destacados</h2>
+
+      
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-golf" src="Imagenes/Porsche_IM/911_1.jpg" alt="Golf" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Porsche_IM/911_2.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Porsche_IM/911_3.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Porsche_IM/911_4.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Porsche_IM/911_5.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            <img src="Imagenes/Porsche_IM/911_1.jpg" onclick="cambiarImagen('main-golf', this.src)" />
+            
+
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3>Porsche 911</h3>
+          <p>
+            El Porsche 911 es el emblema de la marca alemana. Desde su debut en 1964, ha sido perfeccionado generación tras generación, manteniendo su inconfundible diseño y motor trasero. Es un deportivo que equilibra elegancia, potencia y precisión, siendo apto tanto para pistas como para el uso diario. Disponible en versiones como Carrera, Turbo y GT3, representa la máxima expresión de ingeniería automotriz.
+          </p>
+        </div>
+      </div>
+
+     
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-vocho" src="Imagenes/Porsche_IM/Taycan1.jpg" alt="Vocho" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Porsche_IM/Taycan2.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Porsche_IM/Taycan3.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Porsche_IM/Taycan4.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Porsche_IM/Taycan5.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+            <img src="Imagenes/Porsche_IM/Taycan1.jpg" onclick="cambiarImagen('main-vocho', this.src)" />
+           
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3>Porsche Taycan</h3>
+          <p>
+            El Taycan es el primer vehículo 100% eléctrico de Porsche. Combina la potencia de un superdeportivo con la innovación sostenible. Su diseño futurista, aceleración inmediata y tecnología de carga rápida lo convierten en uno de los autos eléctricos más avanzados del mercado. El Taycan redefine la movilidad sin renunciar al ADN deportivo de la marca.
+          </p>
+      </div>
+
+    
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-jetta" src="Imagenes/Porsche_IM/Panamera5.jpg" alt="Jetta" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Porsche_IM/Panamera2.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Porsche_IM/Panamera3.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Porsche_IM/Panamera4.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Porsche_IM/Panamera1.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            <img src="Imagenes/Porsche_IM/Panamera5.jpg" onclick="cambiarImagen('main-jetta', this.src)" />
+            
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3> Porsche Panamera</h3>
+          <p>
+            El Panamera es la respuesta de Porsche al lujo y confort en un sedán de alto rendimiento. Ofrece la potencia de un deportivo con el espacio y elegancia de un auto ejecutivo. Su diseño combina proporciones atléticas con una cabina refinada, ideal para quienes buscan rendimiento sin sacrificar comodidad.
+          </p>
+          </div>
+
+     
+     
+      <div class="auto-viewer">
+        <div class="left">
+          <div class="main-image">
+            <img id="main-tiguan" src="Imagenes/Porsche_IM/Cayenne1.jpg" alt="Tiguan" />
+          </div>
+          <div class="thumbnails">
+            <img src="Imagenes/Porsche_IM/Cayenne2.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Porsche_IM/Cayenne3.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Porsche_IM/Cayenne4.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Porsche_IM/Cayenne5.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+            <img src="Imagenes/Porsche_IM/Cayenne1.jpg" onclick="cambiarImagen('main-tiguan', this.src)" />
+           
+          </div>
+        </div>
+        <div class="right info-carro">
+          <h3>  Porsche Cayenne </h3>
+          <p>
+            La Porsche Cayenne es una SUV de lujo que marcó un hito en la historia de la marca al ampliar su gama más allá de los deportivos tradicionales. Con potentes motorizaciones, tecnología avanzada y un diseño robusto, ofrece una experiencia dinámica tanto en ciudad como en carretera. También está disponible en versión híbrida enchufable.        
+          </p>
+        </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>REDES SOCIALES</p>
+    <div class="redes">
+      <a href="https://www.facebook.com/porsche/?locale=es_LA" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="https://x.com/Porsche" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.instagram.com/porsche/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://www.youtube.com/@Porsche" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+    </div>
+    <p>2025 Galería de Autos. 6IV3</p>
+  </footer>
+
+
+  <script>
+    function cambiarImagen(idPrincipal, nuevaSrc) {
+      document.getElementById(idPrincipal).src = nuevaSrc;
+    }
+  </script>
+</body>
+</html>
